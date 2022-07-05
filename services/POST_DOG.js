@@ -1,3 +1,5 @@
+import { API_URL } from "./API_URL"
+
 export const POST_DOG = async ({
     name,
     bred_for,
@@ -23,7 +25,7 @@ export const POST_DOG = async ({
             image, 
             temperamentsIds: dogTemperaments.map(({id}) => id) 
         }
-        const response = await fetch('http://localhost:3001/dogs', {
+        const response = await fetch(`${API_URL}/dogs`, {
             headers: {
                 'content-type': 'application/json'
             },
