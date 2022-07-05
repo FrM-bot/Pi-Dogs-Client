@@ -4,18 +4,20 @@ import { useNavigate } from "react-router-dom"
 import { BreedNameContext } from '../../context/BreedNameProvider'
 import { Link } from 'react-router-dom';
 import inputStyles from '../styles/input.module.css'
-
+import { useSelector, useDispatch } from 'react-redux'
+import { setBredName } from '../../redux/nameState';
 import cardStype from '../styles/logo.module.css'
 
 const Header = ({ openMenu, showMenu }) => {
   const [isSearch, setIsSearch] = useState(false)
+  const breedName = useSelector((state) => state.bredName.value)
+  const dispatch = useDispatch()
   const navigate = useNavigate()
-  const { breedName, setBreedName } = useContext(BreedNameContext)
   const handlerChange = (e) => {
     if (e.target.value.length > 0) {
       navigate('/dogs')
     }
-    setBreedName(e.target.value)
+    dispatch(setBredName(e.target.value))
   }
   const handlerEnterCapture = (e) => {
     if (e.code === 'Enter') {
@@ -61,7 +63,8 @@ const Header = ({ openMenu, showMenu }) => {
         <div className='flex gap-1'>
 
           <button className='button btn-v2' onClick={() => {
-            setBreedName('')
+            dispatch(setBredName(''))
+
 
             setIsSearch(!isSearch)
           }}>

@@ -1,16 +1,18 @@
-import React, { useState, useEffect, useContext } from 'react'
+import React, { useState, useEffect } from 'react'
 import RenderCardDogs from '../compenents/renderCardDogs'
 import { GET_DOGS } from '../../services/GET_DOGS';
 import Pagination from '../compenents/pagination';
 import { useLocation } from "react-router-dom"
 import { GET_TEMPERAMENTS } from '../../services/GET_TEMPERAMENTS';
-import { BreedNameContext } from '../../context/BreedNameProvider'
+import { useSelector } from 'react-redux'
+
 import DataList from '../compenents/dataList';
 const sortByData = ["name", "weight_min"]
 
 export default function DogsPage() {
     const { search} = useLocation()
-    const { breedName } = useContext(BreedNameContext)
+    const breedName = useSelector((state) => state.bredName.value)
+
     const [filterBy, setfilterBy] = useState(window.localStorage.getItem('filterBy') || '')
     const [numberOfPages, setNumberOfPages] = useState(1)
     const [page, setPage] = useState(Number(search.split('=')[1]) || 1)
