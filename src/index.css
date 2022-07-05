@@ -1,0 +1,105 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,300&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;1,300&family=Playfair+Display:wght@400;500;600&display=swap'); */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
+@import url("./styles/variables.css");
+@import url("./styles/utilities.css");
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  font-family: "Playfair Display", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--bg-color);
+  color: var(--primary);
+  font-size: 1.5rem;
+  letter-spacing: 0.25rem;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+ul {
+  list-style: none;
+}
+
+main {
+  min-height: 70vh;
+  margin: 5rem auto;
+  position: relative;
+  padding-top: 10rem;
+}
+a {
+  text-decoration: none;
+  color: var(--primary);
+}
+footer {
+  padding: 1rem;
+  box-shadow: var(--shadow);
+  border-top: var(--primary) solid 0.1rem;
+}
+.header {
+  --py-header: 15vw;
+  position: fixed;
+  padding: 0 var(--py-header);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - (2 * var(--py-header)));
+  z-index: 30;
+  left: 0;
+  top: 0;
+  border-bottom: var(--border);
+  background-color: var(--bg-color);
+  min-height: 10rem;
+  /* mix-blend-mode: difference; */
+  box-shadow: var(--shadow);
+  filter: var(--filter);
+  cursor: auto;
+  backdrop-filter: blur(0.3rem);
+}
+img {
+  width: 100%;
+}
+
+select {
+  background-color: var(--primary);
+  color: var(--bg-color);
+  padding: 0.5rem;
+  border: none;
+}
+input {
+  font-size: 1.3rem;
+}
+
+label {
+  width: fit-content;
+}
+nav {
+  width: 100%;
+}
+/* nav {
+  position: fixed;
+  padding: 5rem;
+  z-index: 11;
+  top: 0;
+  left: 0;
+
+  backdrop-filter: blur(0.3rem);
+  width: 100%
+}
+} */
+span {
+  white-space: break-spaces;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 780px) {
+  .header {
+    --py-header: 5vw;
+  }
+}

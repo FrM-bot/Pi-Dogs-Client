@@ -1,0 +1,90 @@
+
+.group {
+  display: flex;
+  line-height: 28px;
+  align-items: center;
+  position: relative;
+  margin: 2rem auto;
+}
+.group label {
+    white-space: nowrap;
+}
+
+.group_pag {
+    width: 70px;
+    position: relative;
+}
+.group_pag input {
+    text-align: center;
+}
+.group_pag input {
+    text-align: center;
+}
+.input {
+    /* font-size: 0.9rem; */
+    background-color: transparent;
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 0.5em;
+    padding-block: 0.7em;
+    border: none;
+    color: var(--primary);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.input_error {
+  background: var(--error);
+  width: 100%;
+  box-sizing: border-box;
+  padding-inline: 0.5em;
+  padding-block: 0.7em;
+  border: none;
+  color: var(--primary);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.input_temperament {
+  border: .1rem solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  text-align: center;
+  padding: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+ 
+.input:focus,
+.input:hover {
+    --width-border: 100%;
+    outline: none;
+}
+.group::after, .group_pag::after {
+    --width-border: 100%;
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 100%;
+    background-color: var(--primary);
+    height: .1rem;
+    width: var(--width-border);
+}
+
+.input::placeholder {
+  color: #9e9ea7;
+}
+
+
+.icon {
+  fill: var(--primary);
+  width: 3rem;
+  height: 3rem;
+  padding: 1rem;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type=number] { -moz-appearance:textfield; }

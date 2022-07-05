@@ -1,0 +1,16 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+}
+
+
+.fieldset {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+

@@ -1,0 +1,4 @@
+.dog_logo {
+    width: 40vh;
+    filter: drop-shadow(0 0 1rem.75rem var(--primary));
+}

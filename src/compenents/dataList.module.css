@@ -1,0 +1,37 @@
+.container_data {
+    /* background-color: red; */
+    position: relative;
+}
+
+.data_list {
+    position: absolute;
+    top: calc(100% + 2rem);
+    /* left: 0%; */
+    display: flex;
+    flex-direction: column;
+    background-color: var(--tertiary);
+    z-index: 10;
+    gap: 1rem;
+    backdrop-filter: blur(.3rem);
+    max-height: 40vh;
+    overflow: scroll;
+}
+
+.text {
+    white-space: nowrap;
+    padding: .2rem;
+    margin: 1rem 0;
+    transition: .3s;
+}
+
+.text:last-child {
+    margin: 1rem 0 0 0;
+}
+.text:first-child {
+    margin: 0 1rem 1rem 1rem;
+}
+.text:hover {
+    background-color: var(--primary);
+    color: var(--bg-color);
+    cursor: pointer;
+}

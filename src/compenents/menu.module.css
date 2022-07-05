@@ -1,0 +1,35 @@
+.menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 70vw;
+    height: 100vh;
+    z-index: 10;
+    background-color: var(--tertiary);
+    backdrop-filter: blur(.5rem);
+    transition: .3s;
+    display: grid;
+    place-content: center;
+    /* filter: var(--filter); */
+    animation: appear .3s cubic-bezier(0.175, 0.885, 0.32, 1.275) alternate;
+}
+
+.click_to_close {
+    width: 100vw;
+    inset: 0;
+    height: 100vh;
+    z-index: 9;
+    position: fixed;
+    background-color: transparent;
+}
+
+
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

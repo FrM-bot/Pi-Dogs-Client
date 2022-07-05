@@ -1,0 +1,13 @@
+.pag_container {
+    width: 100%;
+    /* background-color: aqua; */
+    height: 5rem;
+    position: absolute;
+    bottom: 0rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: var(--shadow);
+    border: var(--border);
+}
