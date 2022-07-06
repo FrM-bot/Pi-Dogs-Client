@@ -10,7 +10,7 @@ const DogDetails = () => {
 
   useEffect(() => {
     GET_DOG(id).then(setDog)
-  }, [id])
+  }, [])
 
   return (
     <main>
