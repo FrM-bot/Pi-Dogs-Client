@@ -1,19 +1,17 @@
-import './App.css';
-import { Link, Route, Routes } from 'react-router-dom';
+import './App.css'
+import { Route, Routes } from 'react-router-dom'
 import Index from './routes'
 import Dogs from './routes/dogs'
-import DogDetails from './routes/dogDetails';
-import AddDog from './routes/addDog';
+import DogDetails from './routes/dogDetails'
+import AddDog from './routes/addDog'
 import { useState } from 'react'
-import MenuMovile from './compenents/menu';
-import Header from './compenents/header';
-import Footer from './compenents/footer';
-import About from './routes/about';
+import MenuMovile from './compenents/menu'
+import Header from './compenents/header'
+import Footer from './compenents/footer'
+import About from './routes/about'
 
 function App() {
   const [showMenu, setShowMenu] = useState(false)
-
-
   const openMenu = () => {
     setShowMenu(!showMenu)
   }

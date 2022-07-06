@@ -5,15 +5,18 @@ import App from './App';
 // import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom'
 import BreedNamePRovider from '../context/BreedNameProvider'
+import DogDetailsProvider from '../context/DogContext';
 
 const container = document.getElementById('root')
 const root = createRoot(container)
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <BreedNamePRovider>
-        <App />
-      </BreedNamePRovider>
+      <DogDetailsProvider>
+        <BreedNamePRovider>
+          <App />
+        </BreedNamePRovider>
+      </DogDetailsProvider>
     </BrowserRouter>
   </React.StrictMode>,
 )
