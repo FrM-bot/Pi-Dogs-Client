@@ -11,7 +11,7 @@ const DogDetails = () => {
   useEffect(() => {
     GET_DOG(id).then(setDog)
   }, [id])
-  console.log({ id }, dog)
+
   return (
     <main>
       <div className='flex flex-start my-2'>
