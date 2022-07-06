@@ -26,11 +26,11 @@ function App() {
       }
 
       <Routes>
-        <Route exact path='/' element={<Index />} />
-        <Route exact path='/dogs' element={<Dogs />} />
-        <Route exact path='/dog/:id' element={<DogDetails />} />
-        <Route exact path='/dog/add' element={<AddDog />} />
-        <Route exact path='/about' element={<About />} />
+        <Route path='/' element={<Index />} />
+        <Route path='/dogs' element={<Dogs />} />
+        <Route path='/dog/:id' element={<DogDetails />} />
+        <Route path='/dog/add' element={<AddDog />} />
+        <Route path='/about' element={<About />} />
       </Routes>
       <Footer />
     </div>
