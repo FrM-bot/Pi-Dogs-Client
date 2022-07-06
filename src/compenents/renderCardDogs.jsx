@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 const CardComponent = lazy(() => import('./card'))
 
 export const RenderCardDogs = ({ dogs }) => {
-    console.log({dogs})
   return (
     <div className='columns-3-2-1'>
     {

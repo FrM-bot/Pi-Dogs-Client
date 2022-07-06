@@ -16,7 +16,6 @@ const AddDog = () => {
     const navigate = useNavigate()
     const [temperaments, setTemperaments] = useState([])
     const temperamentInputRef = useRef(null)
-    // const [temperamentsToSend, setTemperamentsToSend] = useState([])
     const [error, setError] = useState({
         name: '',
         bred_for: '',
@@ -90,7 +89,6 @@ const AddDog = () => {
             addTemperament(e.target.value)
         }
     }
-    // console.log(temperamentsToSend)
 
     const onSubmit = e => {
         e.preventDefault()
@@ -124,12 +122,8 @@ const AddDog = () => {
             }
             navigate(`/dog/${res?.id}`)
         })
-        // console.log('se envia')
     }
     const handlerInputChange = (e) => {
-        // console.log(e.target.name, e.target.value)
-        // console.log(stringVAlidator.test(dog.name))
-        // const stringVAlidator = /[0-9]/
         const keysValidatorLengthAndNotNumber = {
             name: true,
             bred_for: true,
@@ -152,7 +146,6 @@ const AddDog = () => {
         else {
             clearError(key)
         }
-        // console.log(e)
 
         if (e.target.type === 'number') {
             setDog({
@@ -167,11 +160,9 @@ const AddDog = () => {
             })
         }
     }
-    // console.log({ dog })
     const clearTemperament = () => {
         temperamentInputRef.current.value = ''
     }
-    // console.log(import.meta.env.VITE_MAGIC_PASS)
     if (!isPassed) {
         return (
             <main>
