@@ -9,7 +9,7 @@ import DataList from '../compenents/dataList';
 const sortByData = ["name", "weight_min"]
 
 export default function DogsPage() {
-    const { search} = useLocation()
+    const { search } = useLocation()
     const { breedName } = useContext(BreedNameContext)
     const [filterBy, setfilterBy] = useState(window.localStorage.getItem('filterBy') || '')
     const [numberOfPages, setNumberOfPages] = useState(1)
@@ -28,7 +28,6 @@ export default function DogsPage() {
 
     useEffect(() => {
         GET_TEMPERAMENTS().then(setTemperaments).catch(console.error)
-
     }, [])
 
     const handelSortByChange = (value) => {
