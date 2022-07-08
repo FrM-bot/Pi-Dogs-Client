@@ -76,7 +76,7 @@ const DogDetails = () => {
             </span>
 
               {
-                 dogDetails?.Temperaments?.map(({ temperament }) => (
+                 dogDetails?.Temperaments?.map(({temperament}) => (
                       <span className='link m-1' key={temperament}>
 
                       {

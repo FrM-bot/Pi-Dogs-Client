@@ -195,21 +195,21 @@ const AddDog = () => {
 
                     <div className={'flex gap-1 md-col w-100'}>
 
-                        <InputComponent handlerInputChange={handlerInputChange} labelName={'height_min'} name={'height_min'} type={'number'} minValue={1} maxValueLength={3} />
-                        <InputComponent handlerInputChange={handlerInputChange} error={error.height_max} labelName={'height_max'} name={'height_max'} type={'number'} minValue={1} maxValueLength={3} />
+                        <InputComponent handlerInputChange={handlerInputChange} labelName={'height min'} name={'height_min'} type={'number'} minValue={1} maxValueLength={3} />
+                        <InputComponent handlerInputChange={handlerInputChange} error={error.height_max} labelName={'height max'} name={'height_max'} type={'number'} minValue={1} maxValueLength={3} />
         
 
                         
                     </div>
 
                     <div className={'flex gap-1 md-col'}>
-                        <InputComponent handlerInputChange={handlerInputChange} labelName={'weight_min'} name={'weight_min'} type={'number'} minValue={0} maxValueLength={3} />
+                        <InputComponent handlerInputChange={handlerInputChange} labelName={'weight min'} name={'weight_min'} type={'number'} minValue={0} maxValueLength={3} />
        
-                        <InputComponent handlerInputChange={handlerInputChange} error={error.weight_max} labelName={'weight_max'} name={'weight_max'} type={'number'} minValue={1} maxValueLength={3} />
+                        <InputComponent handlerInputChange={handlerInputChange} error={error.weight_max} labelName={'weight max'} name={'weight_max'} type={'number'} minValue={1} maxValueLength={3} />
                     </div>
 
 
-                    <InputComponent handlerInputChange={handlerInputChange} error={error.life_span_min} labelName={'life_span_min'} name={'life_span_min'} type={'number'} minValue={1} maxValueLength={2} />
+                    <InputComponent handlerInputChange={handlerInputChange} error={error.life_span_min} labelName={'life span min'} name={'life_span_min'} type={'number'} minValue={1} maxValueLength={2} />
 
 
                     <div className={'flex gap-1 md-col'}>

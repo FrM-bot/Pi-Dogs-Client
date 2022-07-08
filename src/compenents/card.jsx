@@ -2,8 +2,7 @@ import React from 'react'
 
 const Card = ({ id, imgURL, name }) => {
     return (
-            <div className="button-borders">
-        <div className="card inline-block">
+            <div className="card inline-block">
 
                 <div className='img-container'>
                     <img src={imgURL} alt={name} />
@@ -16,8 +15,7 @@ const Card = ({ id, imgURL, name }) => {
                         }
                     </span>
                 </div>
-                            </div>
-        </div>
+            </div>
     )
 }
 

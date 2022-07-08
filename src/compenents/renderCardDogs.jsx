@@ -1,6 +1,7 @@
 import React, { Suspense, lazy, useContext } from 'react'
 import { Link } from 'react-router-dom'
 import { DogDetailsContext } from '../../context/DogContext'
+import Loader from './loader'
 const CardComponent = lazy(() => import('./card'))
 
 export const RenderCardDogs = ({ dogs }) => {
@@ -10,7 +11,7 @@ export const RenderCardDogs = ({ dogs }) => {
     {
       dogs?.map((dog) => (
         <div key={dog.id}>
-          <Suspense fallback={<div>Loading</div>}>
+          <Suspense fallback={<Loader />}>
             <Link to={`/dog/${dog.id}`} onClick={() => setDogDetails(dog)}>
                 <CardComponent id={dog?.id} name={dog?.name} imgURL={dog?.image} />
             </Link>

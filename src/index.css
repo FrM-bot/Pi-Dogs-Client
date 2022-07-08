@@ -4,6 +4,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap");
 @import url("./styles/variables.css");
 @import url("./styles/utilities.css");
+@font-face {
+  font-family: 'Ailerons Typeface';
+  src: url("./styles/Ailerons-Typeface.otf");
+  font-style: normal;
+  font-weight: normal;
+
+}
 html {
   font-size: 62.5%;
 }
@@ -30,7 +37,7 @@ ul {
 main {
   min-height: 70vh;
   margin: 5rem auto;
-  position: relative;
+  /* position: relative; */
   padding-top: 10rem;
 }
 a {

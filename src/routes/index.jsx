@@ -12,7 +12,9 @@ export const Index = () => {
     const navigate = useNavigate()
 
     useEffect(() => {
-      GET_DOGS({ page: 1}).then(({ data }) => setDogs(data))
+      GET_DOGS({ page: 1 }).then(({ data }) => {
+        setDogs(data)
+      })
     }, [])
     const handlerToAdd = () => {
       setToAdd(prevValue => prevValue + 1)
@@ -27,7 +29,7 @@ export const Index = () => {
             <div className={cardStype.card}>
                 <h1>
                   
-                  <span className={cardStype.enclosed}>The Wiki</span>Dogs
+                  <span className={cardStype.enclosed}>Wiki</span>Dogs
                 </h1>
             </div>
           </div>
@@ -46,9 +48,8 @@ export const Index = () => {
         </button>
         </Link>
       </div>
-      <RenderCardDogs dogs={dogs} />
-      <div className='flex flex-end'>
-        
+      <div className='my-2'>
+        <RenderCardDogs dogs={dogs} />
       </div>
     </main>
   )

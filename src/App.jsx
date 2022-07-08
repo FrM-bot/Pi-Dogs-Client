@@ -9,6 +9,7 @@ import MenuMovile from './compenents/menu'
 import Header from './compenents/header'
 import Footer from './compenents/footer'
 import About from './routes/about'
+import Page404 from './routes/page404'
 
 function App() {
   const [showMenu, setShowMenu] = useState(false)
@@ -31,6 +32,7 @@ function App() {
         <Route path='/dog/:id' element={<DogDetails />} />
         <Route path='/dog/add' element={<AddDog />} />
         <Route path='/about' element={<About />} />
+        <Route path='*' element={<Page404 />} />
       </Routes>
       <Footer />
     </div>
