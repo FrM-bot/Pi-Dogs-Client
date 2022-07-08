@@ -1,7 +1,5 @@
-import { useContext, useState } from 'react'
-
+import { useState } from 'react'
 import { useNavigate } from "react-router-dom"
-import { BreedNameContext } from '../../context/BreedNameProvider'
 import { Link } from 'react-router-dom';
 import inputStyles from '../styles/input.module.css'
 import { useSelector, useDispatch } from 'react-redux'

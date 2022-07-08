@@ -1,16 +1,23 @@
 import React, { useEffect, useState } from 'react'
 import styles from '../styles/dogDetail.module.css'
 import { useParams, Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
+import { setDogDetails } from '../../redux/dogState'
 import { GET_DOG } from '../../services/GET_DOG'
 
 const DogDetails = () => {
   const { id } = useParams()
+  const dispatch = useDispatch()
 
-  const [dog, setDog] = useState({})
+  const dogDetails = useSelector((state) => state.dogDetails.value)
 
   useEffect(() => {
-    GET_DOG(id).then(setDog)
-  }, [id])
+    if (!dogDetails?.name) {
+      GET_DOG(id).then((res) => {
+        dispatch(setDogDetails(res))
+      })
+    }
+  }, [id, dogDetails])
   return (
     <main>
       <div className='flex flex-start my-2'>
@@ -25,44 +32,44 @@ const DogDetails = () => {
       <div className='grid-c2-responsive-lg gap-1 card-v2'>
         <div className='center'>
           <div className='img-container center'>
-            <img src={dog?.image} alt="" className={styles.img_details} />
+            <img src={dogDetails?.image} alt="" className={styles.img_details} />
           </div>
         </div>
 
         <div className='flex flex-column justify-center gap-1'>
           <div className=''>
             <span className='subline'>
-              Bred: {`${dog.name} years`}
+              Bred: {`${dogDetails?.name} years`}
             </span>
   
           </div>
 
           <div className='subline my-2'>
             <span className='subline'>
-              Life span: {`${dog.life_span_min} years`}
+              Life span: {`${dogDetails?.life_span_min} years`}
             </span>
           </div>
 
           <div className='subline my-2'>
             <span className='subline'>
-              Weight: {`${dog.weight_min} kg - ${dog.weight_max} kg`}
+              Weight: {`${dogDetails?.weight_min} kg - ${dogDetails?.weight_max} kg`}
             </span>
           </div>
 
           <div className='subline my-2'>
             <span className='subline'>
-            Height: {`${dog.height_min} cm - ${dog.height_max} cm`}
+            Height: {`${dogDetails?.height_min} cm - ${dogDetails?.height_max} cm`}
             </span>
           </div>
 
           <div className='subline my-2'>
             <span className='subline'>
-            Bred for: {dog?.bred_for}
+            Bred for: {dogDetails?.bred_for}
             </span>
           </div>
           <div className='subline my-2'>
             <span className='subline'>
-            Breed group: {dog?.breed_group}
+            Breed group: {dogDetails?.breed_group}
             </span>
           </div>
 
@@ -72,7 +79,7 @@ const DogDetails = () => {
             </span>
 
               {
-                 dog?.Temperaments?.map(({ temperament }) => (
+                 dogDetails?.Temperaments?.map(( temperament ) => (
                       <span className='link m-1' key={temperament}>
 
                       {

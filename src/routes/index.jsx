@@ -19,7 +19,7 @@ export const Index = () => {
             <div className={cardStype.card}>
                 <h1>
                   
-                  <span className={cardStype.enclosed}>The Wiki</span>Dogs
+                  <span className={cardStype.enclosed}>Wiki</span>Dogs
                 </h1>
             </div>
           </div>
