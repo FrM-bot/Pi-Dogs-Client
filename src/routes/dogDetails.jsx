@@ -14,7 +14,7 @@ const DogDetails = () => {
       GET_DOG(id).then(setDogDetails)
     }
   }, [id, dogDetails])
-  console.log(dogDetails)
+
   return (
     <main>
       <div className='flex flex-start my-2'>
