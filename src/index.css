@@ -37,7 +37,7 @@ ul {
 main {
   min-height: 70vh;
   margin: 5rem auto;
-  /* position: relative; */
+  position: relative;
   padding-top: 10rem;
 }
 a {
