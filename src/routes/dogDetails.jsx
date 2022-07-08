@@ -14,7 +14,6 @@ const DogDetails = () => {
       GET_DOG(id).then(setDogDetails)
     }
   }, [id, dogDetails])
-
   return (
     <main>
       <div className='flex flex-start my-2'>
@@ -76,7 +75,7 @@ const DogDetails = () => {
             </span>
 
               {
-                 dogDetails?.Temperaments?.map(({temperament}) => (
+                 dogDetails?.Temperaments?.map((temperament) => (
                       <span className='link m-1' key={temperament}>
 
                       {
