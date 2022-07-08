@@ -20,6 +20,7 @@ export const Index = () => {
       setToAdd(prevValue => prevValue + 1)
       toAdd === 11 && navigate('/dog/add')
     }
+    console.log(dogs)
   return (
     <main>
       <div className='flex space-between gap-1 lg-col min-h-100 py-2'>
