@@ -33,7 +33,6 @@ function App() {
         <Route path='/dog/add' element={<AddDog />} />
         <Route path='/about' element={<About />} />
         <Route path='*' element={<Page404 />} />
-
       </Routes>
       <Footer />
     </div>
